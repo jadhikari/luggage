@@ -13,6 +13,8 @@ class EntriesController < ApplicationController
   # GET /entries/new
   def new
     @entry = Entry.new
+    @time = Time.new.strftime("%Y-%m-%d %H:%M:%S")
+    
   end
 
   # GET /entries/1/edit
@@ -61,6 +63,7 @@ class EntriesController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_entry
       @entry = Entry.find(params[:id])
+
     end
 
     # Only allow a list of trusted parameters through.

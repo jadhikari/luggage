@@ -23,22 +23,22 @@
 
   <div>
     <%= form.label :receiv_by, style: "display: block" %>
-    <%= form.number_field :receiv_by %>
+    <%= form.text_field :receiv_by %>
   </div>
 
   <div>
     <%= form.label :receiv_datetime, style: "display: block" %>
-    <%= form.datetime_field :receiv_datetime %>
+    <%= form.datetime_field :receiv_datetime, value: @time, :disabled => true %>
   </div>
 
   <div>
-    <%= form.label :return_by, style: "display: block" %>
-    <%= form.number_field :return_by %>
+    <%#= form.label :return_by, style: "display: block" %>
+    <%#= form.text_field :return_by %>
   </div>
 
   <div>
-    <%= form.label :return_datetime, style: "display: block" %>
-    <%= form.datetime_field :return_datetime %>
+    <%#= form.label :return_datetime, style: "display: block" %>
+    <%#= form.datetime_field :return_datetime %>
   </div>
 
   <div>

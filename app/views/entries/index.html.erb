@@ -1,14 +1,30 @@
-<p style="color: green"><%= notice %></p>
+<div class="rows">
+  <div class="col-12">
+    <h1>Luggage List</h1>
+    <h3><%= link_to "New Entry", new_entry_path %></h3>
+  </div>
 
-<h1>Entries</h1>
+  <div class="col-12">
+    <p style="color: green"><%= notice %></p>
+  </div>
 
-<div id="entries">
-  <% @entries.each do |entry| %>
-    <%= render entry %>
-    <p>
-      <%= link_to "Show this entry", entry %>
-    </p>
-  <% end %>
+  <div id="entries" class="col-12">
+    <% @entries.each do |entry| %>
+      <%= render entry %>
+      <p>
+        <%= link_to "Show this entry", entry %>
+      </p>
+    <% end %>
+  </div>
+
 </div>
 
-<%= link_to "New entry", new_entry_path %>
+
+
+
+
+
+
+
+
+
