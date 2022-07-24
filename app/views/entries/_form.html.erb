@@ -1,0 +1,47 @@
+<%= form_with(model: entry) do |form| %>
+  <% if entry.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(entry.errors.count, "error") %> prohibited this entry from being saved:</h2>
+
+      <ul>
+        <% entry.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :luggage_no, style: "display: block" %>
+    <%= form.number_field :luggage_no %>
+  </div>
+
+  <div>
+    <%= form.label :c_name, style: "display: block" %>
+    <%= form.text_field :c_name %>
+  </div>
+
+  <div>
+    <%= form.label :receiv_by, style: "display: block" %>
+    <%= form.number_field :receiv_by %>
+  </div>
+
+  <div>
+    <%= form.label :receiv_datetime, style: "display: block" %>
+    <%= form.datetime_field :receiv_datetime %>
+  </div>
+
+  <div>
+    <%= form.label :return_by, style: "display: block" %>
+    <%= form.number_field :return_by %>
+  </div>
+
+  <div>
+    <%= form.label :return_datetime, style: "display: block" %>
+    <%= form.datetime_field :return_datetime %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  luggage_no: 1
+  c_name: MyString
+  receiv_by: 1
+  receiv_datetime: 2022-07-24 13:35:16
+  return_by: 1
+  return_datetime: 2022-07-24 13:35:16
+
+two:
+  luggage_no: 1
+  c_name: MyString
+  receiv_by: 1
+  receiv_datetime: 2022-07-24 13:35:16
+  return_by: 1
+  return_datetime: 2022-07-24 13:35:16
