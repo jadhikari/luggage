@@ -72,4 +72,4 @@ group :test do
 end
 #adding gem for bootstrap
 gem "cssbundling-rails"
-
+gem "pry-rails"
