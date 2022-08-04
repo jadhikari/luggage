@@ -9,12 +9,32 @@
   </div>
 
   <div id="entries" class="col-12">
-    <% @entries.each do |entry| %>
-      <%= render entry %>
-      <p>
-        <%= link_to "Show this entry", entry %>
-      </p>
-    <% end %>
+    <table class="table">
+      <thead>
+        <tr>
+          <th></th>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @entries.each do |entry| %>
+          <tr>
+            <td scope="row"><%= entry.luggage_no %></td>
+            <td><%= entry.c_name %></td>
+            <td><%= entry.receiv_by %></td>
+            <td><%= entry.receiv_datetime %></td>
+            <td> 
+              <%= link_to "EDIT", edit_entry_path(entry) %> |
+              <%= link_to "Check Out", checkout_entry_path(entry) %> |
+              <%= button_to "Destroy this entry", entry, method: :delete %>
+              </td>
+          </tr>
+        <% end %>
+        
+      </tbody>
+    </table>
+    
   </div>
 
 </div>
